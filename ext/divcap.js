@@ -24,7 +24,7 @@ function DivCap(elems, doneFunc, errorFunc)
             // tell extension to take a screenshot after a short delay
             window.setTimeout(function() {
                 chrome.runtime.sendMessage(
-                    "bgigfngpiapeiicnamikpicikekkjcpi",
+                    "jloidncadgegcgobpmikelckmflhjkjn",
                     {name: 'screenshot'}, 
                     handleChromeResponse.bind(self, elem)
                 );
@@ -61,7 +61,7 @@ function DivCap(elems, doneFunc, errorFunc)
                 // is anti-aliased; which will break everything
                 var numColors = self.getNumColors(context);
                 //console.log(numColors);
-                if (numColors != 2)
+                if (numColors != 1)
                 {
                     self.failedDueToClearTypeEnabled = true;
                     errorFunc();
