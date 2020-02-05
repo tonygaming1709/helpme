@@ -61,7 +61,7 @@ function DivCap(elems, doneFunc, errorFunc)
                 // is anti-aliased; which will break everything
                 var numColors = self.getNumColors(context);
                 console.log(numColors);
-                if (numColors != 1)
+                if (numColors != 2)
                 {
                     self.failedDueToClearTypeEnabled = true;
                     errorFunc();
