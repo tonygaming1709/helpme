@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "\"Papers, Please\" Localization Snapshotter",
+  "name": "\"Papers, Please\" Localization Snapshotter for Me!",
   "description": "Take in-browser snapshots of image captures in order to generate a localization pack for <Papers, Please>.",
   "version": "1.0.7",
 
