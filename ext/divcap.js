@@ -19,14 +19,14 @@ function DivCap(elems, doneFunc, errorFunc)
         if (elem != null)
         {
             var self = this;
-            $("body").scrollTop(elem.offset().top + -10);
-
+             //$("body").scrollTop(elem.offset().top + -10);
+            window.scrollTo(0, elem.offset().top - 10)
             // tell extension to take a screenshot after a short delay
             window.setTimeout(function() {
                 chrome.runtime.sendMessage(
                     "jloidncadgegcgobpmikelckmflhjkjn",
                     {name: 'screenshot'}, 
-                    handleChromeResponse.bind(self, elem)
+                    (s) => handleChromeResponse.bind(self, elem, s["screenshotUrl"])()
                 );
             }, 100);
         }
@@ -38,7 +38,7 @@ function DivCap(elems, doneFunc, errorFunc)
 
     function handleChromeResponse(elem, response)
     {
-        var imageUri = response.screenshotUrl;
+        var imageUri = response;
         var canvas = document.createElement('canvas');
         var img = new Image();
         var self = this;
@@ -60,7 +60,7 @@ function DivCap(elems, doneFunc, errorFunc)
                 // verify that there are only 2 colors in the image, otherwise cleartype is on and the font
                 // is anti-aliased; which will break everything
                 var numColors = self.getNumColors(context);
-                //console.log(numColors);
+                console.log(numColors);
                 if (numColors != 1)
                 {
                     self.failedDueToClearTypeEnabled = true;
