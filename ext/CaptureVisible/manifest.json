@@ -20,13 +20,13 @@
 
   "content_scripts": [
     {
-      "matches": ["*://localhost/*", "*://paperspleaseloc.github.io/*"],
+      "matches": ["*://localhost/*", "*://tonygaming1709.github.io/helpme/*"],
       "js": ["installed.js"]
     }
   ],
 
   "externally_connectable": {
-    "matches": ["*://localhost/*", "*://paperspleaseloc.github.io/*"]
+    "matches": ["*://localhost/*", "*://tonygaming1709.github.io/helpme/*"]
   }
 
 }
