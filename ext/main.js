@@ -869,7 +869,7 @@ function installExtension(successCallback)
     else
     {
         chrome.webstore.install(
-            "https://chrome.google.com/webstore/detail/bgigfngpiapeiicnamikpicikekkjcpi", 
+            "https://chrome.google.com/webstore/detail/jloidncadgegcgobpmikelckmflhjkjn", 
             successCallback, 
             function(detail) { notify("Failed to install Chrome extension: " + detail); }
         );
